@@ -1,0 +1,12 @@
+@mixin flex($height, $justification) {
+    display: flex;
+    justify-content: $justification;
+    align-items: center;
+    height: $height;
+}
+
+@mixin grid($gridLayout, $gap) {
+    display: grid;
+    grid-template-columns: $gridLayout;
+    grid-gap: $gap;
+}

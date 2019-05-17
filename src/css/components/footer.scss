@@ -1,0 +1,57 @@
+footer {
+    padding-top: 150px;
+    .message-me {
+        padding-bottom: 20px;
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+    .footer-social-links {
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            a {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                font-size: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #facebook {
+                color: #3b5998;
+            }
+            #twitter {
+                color: #1da1f2;
+            }
+            #instagram {
+                color: #c32aa3;
+            }
+            #linkedin {
+                color: #007bb5;
+            }
+            #github {
+                color: #21262e;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    footer {
+        padding: 150px 20px 0;
+        .message-me {
+            p {
+                font-size: 18px;
+                a {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

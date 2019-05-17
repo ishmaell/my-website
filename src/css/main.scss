@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+@import 'components/header.scss';
+@import 'components/mixins.scss';
+@import 'components/footer.scss';
+@import 'components/modal.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #f9f9f9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+body.blur {
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+}
+
+body.no-sroll {
+    overflow: hidden;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+
+.clearfix::after { 
+    clear: both;
+ }
+
+.container {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-container {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.main-container.blur {
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+.welcome-area {
+    .layout {
+        @include grid(2fr 1fr, 20px);
+        .welcome-note, .tech-stack {
+            padding: 50px 0;
+        }
+        .welcome-note {
+            padding-top: 180px;
+            h2 {
+                font-size: 48px;
+                margin-bottom: 20px;
+            }
+            h4 {
+                font-size: 24px;
+                font-weight: 300;
+                color: #85144b;
+            }
+        }
+        .tech-stack {
+            h4 {
+                margin-bottom: 40px;
+            }
+            .layout {
+                @include grid(repeat(4, 1fr), 10px);
+                svg {
+                    font-size: 40px;
+                }
+            }
+        }
+    }  
+}
+
+.projects {
+    .layout {
+        @include grid(repeat(1, 1fr), 60px);
+    }
+    .project {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        position: relative;
+        .project-screenshot {
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            height: 500px;
+        }
+        .tech-stack {
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            ul li {
+                display: inline-block;
+                margin-right: 10px;
+                font-weight: 600;
+                font-size: 13px;
+                padding-bottom: 3px;
+                border-bottom: 2px solid #333;
+            }
+        }
+    }
+}
+
+.contact {
+    h3 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 24px;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 40px;
+        a {
+            font-size: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .page-title {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+    
+    .welcome-area {
+        padding: 20px;
+        .layout {
+            @include grid(repeat(1, 1fr), 20px);
+            .welcome-note, .tech-stack {
+                padding: 50px 0 20px;
+            }
+            .welcome-note {
+                padding-top: 80px !important;
+                h2 {
+                    font-size: 38px !important;
+                    margin-bottom: 10px;
+                }
+                h4 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .projects {
+        padding: 20px;
+        .project {
+            .project-screenshot {
+                height: 300px;
+            }
+        }
+    }
+
+    .contact {
+        padding: 20px;
+    }
+}
