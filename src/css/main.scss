@@ -201,3 +201,25 @@ ul {
         padding: 20px;
     }
 }
+
+@media screen and (max-width: 671px) {
+    .welcome-area {
+        padding: 20px;
+        .layout {
+            @include grid(repeat(1, 1fr), 20px);
+            .welcome-note, .tech-stack {
+                padding: 25px 0 20px;
+            }
+            .welcome-note {
+                padding-top: 25px !important;
+                h2 {
+                    font-size: 32px !important;
+                    margin-bottom: 10px;
+                }
+                h4 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
