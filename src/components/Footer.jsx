@@ -12,7 +12,7 @@ export function Footer() {
         <footer>
             <div className="container">
                 <div className="message-me">   
-                    <p>If you would like to work with me, <a href="mailto:isiakaismaila@gmail.com">shoot me an email</a>.</p>
+                    <p>If you would like to work with me, <a href="mailto:isiakaismaila@gmail.com">send me an email</a>.</p>
                 </div>
                 <ul className="footer-social-links">
                     <li>
