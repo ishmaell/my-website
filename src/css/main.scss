@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+@import 'components/animations.scss';
 @import 'components/header.scss';
 @import 'components/mixins.scss';
 @import 'components/footer.scss';
 @import 'components/modal.scss';
+@import 'components/theme.scss';
 
 * {
     box-sizing: border-box;
@@ -10,23 +12,24 @@
     margin: 0;
 }
 
+:root {
+    --theme-color: #f9f9f9;
+    --text-color: #333;
+    --text-border-color: #333;
+    --header-border-color: rgba(0,0,0,0.05);
+}
+
+
 html, body {
     height: 100%;
     width: 100%;
 }
 
 body {
-    background: #f9f9f9;
+    background: var(--theme-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #333;
-}
-
-body.blur {
-    -moz-filter: blur(7px);
-    -o-filter: blur(7px);
-    -ms-filter: blur(7px);
-    filter: blur(7px);
 }
 
 body.no-sroll {
@@ -34,7 +37,7 @@ body.no-sroll {
 }
 
 a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -67,13 +70,7 @@ ul {
 .main-container {
     padding-top: 70px;
     padding-bottom: 40px;
-}
-
-.main-container.blur {
-    -moz-filter: blur(7px);
-    -o-filter: blur(7px);
-    -ms-filter: blur(7px);
-    filter: blur(7px);
+    color: var(--text-color);
 }
 
 .page-title {
@@ -121,6 +118,9 @@ ul {
     .project {
         box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         position: relative;
+        .circle.hide {
+            display: none;;
+        }
         .project-screenshot {
             background-repeat: no-repeat;
             background-position: top;
@@ -137,7 +137,7 @@ ul {
                 font-weight: 600;
                 font-size: 13px;
                 padding-bottom: 3px;
-                border-bottom: 2px solid #333;
+                border-bottom: 2px solid var(--text-border-color);
             }
         }
     }

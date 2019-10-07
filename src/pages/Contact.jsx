@@ -3,6 +3,7 @@ import { Aux, Header } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Theme from 'components/Theme';
 
 class Contact extends React.Component {
     render() {
@@ -34,6 +35,7 @@ class Contact extends React.Component {
                             </ul>
                         </div>
                     </div>
+                    {/* <Theme /> */}
                 </div>
             </Aux>
         );

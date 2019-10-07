@@ -1,5 +1,6 @@
 import React from 'react';
 import { Aux, Header, Footer, Modal } from 'components';
+import Theme from 'components/Theme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faHtml5,
@@ -53,6 +54,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <Footer />
+                    {/* <Theme currentTheme={false} /> */}
                 </div>
                 
             </Aux>

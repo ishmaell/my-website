@@ -1,0 +1,38 @@
+.circle {
+    box-sizing: border-box;
+    height: 200px;width: 200px;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 1px 3px 10px rgba(0,0,0,0.8);
+   
+    & svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      fill: none;
+      stroke: #eee;
+      stroke-width: 10;
+      stroke-linecap: round;
+      overflow: visible;
+      animation: rotate .95s linear 0s infinite;
+      & path{
+        stroke: #001f3f;
+      } 
+      & circle{
+        fill: none;
+      }
+    }
+  }
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}  
